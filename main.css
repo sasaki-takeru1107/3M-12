@@ -1,0 +1,198 @@
+/* main.css */
+
+/* 基本的なリセットとフォント設定 */
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* 視認性の良い濃い色 */
+    background-color: #f4f7f6; /* 優しい背景色 */
+    font-family: 'Inter', sans-serif; /* Interフォントを優先 */
+}
+
+/* コンテナの基本的なスタイル */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #2563eb; /* 濃い青 */
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 15px; /* 角丸 */
+    border-bottom-right-radius: 15px; /* 角丸 */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+header h1 span {
+    display: block; /* 大学名を独立したブロックにする */
+    font-size: 1.5rem; /* 小さめのフォントサイズ */
+    color: #bfdbfe; /* 薄い青色 */
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* メインコンテンツセクションのスタイル */
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px; /* 角丸 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #1d4ed8; /* 青系の見出し色 */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #93c5fd; /* 下線 */
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* 画像のスタイル */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* 角丸 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* 画像の下の余白をなくす */
+    margin: 1rem auto; /* 中央揃え */
+}
+
+/* リンクのスタイル */
+a {
+    color: #2563eb; /* 青系のリンク色 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1e40af; /* ホバー時の色 */
+    text-decoration: underline;
+}
+
+/* ボタン風リンクのスタイル (Tailwind CSSクラスを直接使用しているため、ここでは基本的な定義のみ) */
+.bg-blue-600 { background-color: #2563eb; }
+.hover\:bg-blue-700:hover { background-color: #1d4ed8; }
+.bg-green-600 { background-color: #16a34a; }
+.hover\:bg-green-700:hover { background-color: #15803d; }
+
+.font-bold { font-weight: 700; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.rounded-full { border-radius: 9999px; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 300ms; }
+.duration-300 { transition-duration: 300ms; }
+.ease-in-out { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+.transform { transform: var(--tw-transform); }
+.hover\:scale-105:hover { --tw-scale-x: 1.05; --tw-scale-y: 1.05; transform: var(--tw-transform); }
+
+
+/* リストのスタイル */
+ul {
+    list-style-type: disc; /* デフォルトのディスク */
+    margin-left: 1.5rem;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #1e40af; /* 濃い青 */
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-top-left-radius: 15px; /* 角丸 */
+    border-top-right-radius: 15px; /* 角丸 */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* レスポンシブデザインのためのメディアクエリ */
+@media (min-width: 768px) { /* Medium screens (tablet) and up */
+    header h1 {
+        font-size: 3.5rem;
+    }
+    header h1 span {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Flexbox for image and text layout on larger screens */
+    .flex-col.md\:flex-row {
+        flex-direction: row;
+    }
+    .flex-col.md\:flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .md\:w-1\/2 {
+        width: 50%;
+    }
+    .md\:p-8 {
+        padding: 2rem;
+    }
+    .md\:p-10 {
+        padding: 2.5rem;
+    }
+    .md\:text-5xl {
+        font-size: 3rem; /* 48px */
+    }
+    .md\:text-2xl {
+        font-size: 1.5rem; /* 24px */
+    }
+    .md\:flex-row {
+        flex-direction: row;
+    }
+    .md\:flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .md\:w-1\/2 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) { /* Large screens (desktop) and up */
+    header h1 {
+        font-size: 4rem;
+    }
+    header h1 span {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1.75rem;
+    }
+
+    section h2 {
+        font-size: 3rem;
+    }
+}
